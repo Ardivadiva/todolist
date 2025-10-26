@@ -1,0 +1,190 @@
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  width: 900px;
+  border-radius: 15px;
+  padding: 60px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+#taskInput:focus {
+  border-color: #6a11cb;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.add {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+
+.btn.list {
+  background: linear-gradient(90deg, #f7971e, #ffd200);
+}
+
+.btn.back {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  margin-top: 15px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+li {
+  background: #f8f9fa;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(90deg, #e60026, #ff416c);
+  transform: scale(1.05);
+}
+
+/* --- POPUP NOTIFICATION --- */
+.popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background: white;
+  color: #333;
+  padding: 12px 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.popup.show {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.popup.success {
+  border-left: 6px solid #4CAF50;
+}
+
+.popup.error {
+  border-left: 6px solid #f44336;
+}
+
+.archive-btn {
+  background-color: #f0ad4e; /* oranye / kuning hangat */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.archive-btn:hover {
+  background-color: #ec971f; /* oranye lebih gelap saat hover */
+}
+
+#viewArchivedBtn {
+  background-color: #d9534f; /* merah cerah */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+#viewArchivedBtn:hover {
+  background-color: #c9302c; /* merah lebih gelap saat hover */
+}
+
+/* Logo di atas judul */
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.logo img {
+  width: 80px;       /* ukuran logo */
+  height: 80px;
+  object-fit: contain;
+  border-radius: 15px; /* opsional, membuat logo membulat */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
